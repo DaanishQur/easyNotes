@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easyNotes Beta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h2>Click the button below to begin taking notes</h2>
+    
+    <header>
+        <div class="button-container">
+            <button id="start-recognition">Start Recognition</button>
+        </div>
+
+        <div class="transcript-container">
+            <button id="download-transcription">Download Notes</button>
+        </div>
+
+        <h1 id="transcription">This text will update to your transcribed speech once it ends. You will also receive a .txt file consisting of your organized notes.</h1>
+
+        <!-- Added section for organized text display -->
+        <div id="organized-text-container">
+            <h2>Organized Notes:</h2>
+            <div id="organized-text"></div>
+        </div>
+        <!-- End of added section -->
+
+        <a href="#" class="header-button"> </a>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
+        <div id="target-section">
+            <!-- Content will be dynamically injected here -->
+        </div>
+    </header>
+    
+
+    <script src="script.js"></script>    
+    <script src="transition.js"></script>
+</body>
+</html>
